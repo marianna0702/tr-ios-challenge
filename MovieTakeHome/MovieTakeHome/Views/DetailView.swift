@@ -24,12 +24,13 @@ struct DetailView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 300, height: 300)
-                            Text(details.name)
-                                .font(.title)
                             HStack {
-                                Text(details.releaseDate.fullDateString)
+                                Text(details.name)
+                                    .font(.title)
                                 FavoritesView(movieId: movieID)
                             }
+                            Text(details.releaseDate.fullDateString)
+                            Text(details.ratingString)
                             Divider()
                             Text("Description")
                                 .font(.headline)

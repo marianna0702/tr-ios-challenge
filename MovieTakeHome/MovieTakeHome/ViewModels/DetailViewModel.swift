@@ -12,7 +12,6 @@ class DetailViewModel: ObservableObject {
     @Published var recommendations: [Movie]?
     @Published var viewState: ViewState = .loading
     
-    
     @MainActor
     func fetchMovieDetails(movieId: Int) async {
         do {

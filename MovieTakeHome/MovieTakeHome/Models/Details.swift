@@ -20,6 +20,11 @@ struct Details: Codable {
         URL(string: picture)
     }
     
+    var ratingString: String {
+        let string = String(format: "%.1f", rating)
+        return string + "/10"
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id
         case name
