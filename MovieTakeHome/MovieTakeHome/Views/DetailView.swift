@@ -40,7 +40,10 @@ struct DetailView: View {
                             }
                             Text(details.name)
                                 .font(.title)
-                            Text(details.releaseDate.fullDateString)
+                            HStack {
+                                Text(details.releaseDate.fullDateString)
+                                FavoritesView(movieId: movieID)
+                            }
                             Divider()
                             Text("Description")
                                 .font(.headline)

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = MovieListViewModel()
+    private var favorites = Favorites.shared
     
     var body: some View {
         NavigationStack {

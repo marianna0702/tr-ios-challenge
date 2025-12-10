@@ -42,6 +42,8 @@ struct MovieResultView: View {
                     .font(.callout)
                     .foregroundStyle(Color.secondary)
             }
+            Spacer()
+            FavoritesView(movieId: movie.id)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         
