@@ -19,7 +19,10 @@ struct ContentView: View {
                     case .loaded:
                         ScrollView {
                             ForEach(viewModel.movies) { movie in
-                                MovieResultView(movie: movie)
+                                NavigationLink(value: movie) {
+                                    MovieResultView(movie: movie)
+                                }
+                                .buttonStyle(.plain)
                             }
                             .padding(.horizontal)
                         }
@@ -38,6 +41,9 @@ struct ContentView: View {
             }
             .navigationTitle("Movies")
             .navigationBarTitleDisplayMode(.large)
+            .navigationDestination(for: Movie.self) { movie in
+                DetailView(movieID: movie.id)
+            }
         }
         .task() {
             Task {

@@ -9,16 +9,9 @@ import Foundation
 
 class MovieListViewModel: ObservableObject {
     @Published var movies: [Movie] = []
-    @Published var searchState: SearchState = .loading
+    @Published var searchState: ViewState = .loading
     
-    enum SearchState {
-        case loading
-        case loaded
-        case error
-        case empty
-    }
-    
-    init(movies: [Movie] = [], searchState: SearchState = .loading) {
+    init(movies: [Movie] = [], searchState: ViewState = .loading) {
         self.movies = movies
         self.searchState = searchState
     }
