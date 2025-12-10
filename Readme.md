@@ -7,6 +7,7 @@ Functionality and code quality matter more than pixel perfection.
 ## Tested On
 - iOS 17 minimum 
 - iPhone 16 Pro simulator (iOS 18.6)
+- Xcode 16.4
 
 ## What I Would Do Next
 - Add search to handle large lists
