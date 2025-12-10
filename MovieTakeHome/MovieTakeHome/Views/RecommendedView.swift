@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct RecommendedView: View {
     var movies: [Movie]
@@ -14,24 +15,12 @@ struct RecommendedView: View {
         ScrollView(.horizontal) {
             HStack {
                 ForEach(movies) { movie in
-                    AsyncImage(url: movie.thumbnailURL) { result in
-                        switch result {
-                            case .empty:
-                                ProgressView()
-                                    .frame(width: 85, height: 125)
-                            case .success(let image):
-                                NavigationLink(value: movie) {
-                                    image
-                                        .resizable()
-                                        .scaledToFill()
-                                        .frame(width: 125, height: 125)
-                                        .clipShape(Rectangle())
-                                }
-                            case .failure:
-                                EmptyView()
-                            @unknown default:
-                                EmptyView()
-                        }
+                    NavigationLink(value: movie) {
+                        KFImage(movie.thumbnailURL)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 125, height: 125)
+                            .clipShape(Rectangle())
                     }
                 }
             }

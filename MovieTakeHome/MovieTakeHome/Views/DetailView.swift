@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct DetailView: View {
     var movieID: Int
@@ -19,25 +20,10 @@ struct DetailView: View {
                 case .loaded:
                     if let details = viewModel.details {
                         ScrollView {
-                            AsyncImage(url: details.pictureURL) { result in
-                                switch result {
-                                    case .empty:
-                                        ProgressView()
-                                    case .success(let image):
-                                        image
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 300, height: 300)
-                                    case .failure:
-                                        Image(systemName: "exclamationmark.triangle.fill")
-                                            .resizable()
-                                            .frame(width: 85, height: 125)
-                                    @unknown default:
-                                        Image(systemName: "exclamationmark.triangle.fill")
-                                            .resizable()
-                                            .frame(width: 85, height: 125)
-                                }
-                            }
+                            KFImage(details.pictureURL)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 300, height: 300)
                             Text(details.name)
                                 .font(.title)
                             HStack {

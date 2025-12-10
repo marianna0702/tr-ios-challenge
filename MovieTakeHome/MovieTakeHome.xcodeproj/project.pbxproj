@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		15D8DF3C2EE94B2800EB975E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 15D8DF3B2EE94B2800EB975E /* Kingfisher */; };
+		15D8DF3F2EE94B4000EB975E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 15D8DF3E2EE94B4000EB975E /* Kingfisher */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		15D8DEF82EE8A30100EB975E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D8DF3C2EE94B2800EB975E /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D8DF3F2EE94B4000EB975E /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +79,7 @@
 			children = (
 				15D8DEEC2EE8A2FF00EB975E /* MovieTakeHome */,
 				15D8DEFA2EE8A30100EB975E /* MovieTakeHomeTests */,
+				15D8DF3D2EE94B4000EB975E /* Frameworks */,
 				15D8DEEB2EE8A2FF00EB975E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +92,13 @@
 				15D8DF012EE8A30100EB975E /* MovieTakeHomeUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		15D8DF3D2EE94B4000EB975E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +121,7 @@
 			);
 			name = MovieTakeHome;
 			packageProductDependencies = (
+				15D8DF3B2EE94B2800EB975E /* Kingfisher */,
 			);
 			productName = MovieTakeHome;
 			productReference = 15D8DEEA2EE8A2FF00EB975E /* MovieTakeHome.app */;
@@ -129,6 +145,7 @@
 			);
 			name = MovieTakeHomeTests;
 			packageProductDependencies = (
+				15D8DF3E2EE94B4000EB975E /* Kingfisher */,
 			);
 			productName = MovieTakeHomeTests;
 			productReference = 15D8DEF72EE8A30100EB975E /* MovieTakeHomeTests.xctest */;
@@ -186,6 +203,9 @@
 			);
 			mainGroup = 15D8DEE12EE8A2FF00EB975E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				15D8DF3A2EE94B2800EB975E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 15D8DEEB2EE8A2FF00EB975E /* Products */;
 			projectDirPath = "";
@@ -549,6 +569,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15D8DF3A2EE94B2800EB975E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15D8DF3B2EE94B2800EB975E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15D8DF3A2EE94B2800EB975E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		15D8DF3E2EE94B4000EB975E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15D8DF3A2EE94B2800EB975E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15D8DEE22EE8A2FF00EB975E /* Project object */;
 }
