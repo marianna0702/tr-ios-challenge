@@ -40,11 +40,6 @@
 			path = MovieTakeHomeTests;
 			sourceTree = "<group>";
 		};
-		15D8DF042EE8A30100EB975E /* MovieTakeHomeUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MovieTakeHomeUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +72,6 @@
 			children = (
 				15D8DEEC2EE8A2FF00EB975E /* MovieTakeHome */,
 				15D8DEFA2EE8A30100EB975E /* MovieTakeHomeTests */,
-				15D8DF042EE8A30100EB975E /* MovieTakeHomeUITests */,
 				15D8DEEB2EE8A2FF00EB975E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,9 +146,6 @@
 			);
 			dependencies = (
 				15D8DF032EE8A30100EB975E /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				15D8DF042EE8A30100EB975E /* MovieTakeHomeUITests */,
 			);
 			name = MovieTakeHomeUITests;
 			packageProductDependencies = (
