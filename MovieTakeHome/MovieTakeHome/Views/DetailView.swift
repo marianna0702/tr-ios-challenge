@@ -40,7 +40,7 @@ struct DetailView: View {
                             }
                             Text(details.name)
                                 .font(.title)
-                            Text(details.releaseDate.yearString)
+                            Text(details.releaseDate.fullDateString)
                             Divider()
                             Text("Description")
                                 .font(.headline)
@@ -51,6 +51,13 @@ struct DetailView: View {
                                 .font(.headline)
                             Text(details.notes)
                                 .font(.caption)
+                            Divider()
+                            if let recommendations = viewModel.recommendations,
+                               recommendations.count > 0 {
+                                Text("Recommended")
+                                    .font(.headline)
+                                RecommendedView(movies: recommendations)
+                            }
                         }
                     }
                 case .error, .empty:
@@ -66,6 +73,7 @@ struct DetailView: View {
         .padding()
         .task {
             await viewModel.fetchMovieDetails(movieId: movieID)
+            await viewModel.fetchRecommendations(movieId: movieID)
         }
     }
 }
